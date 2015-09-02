@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def gome
+  def home
   end
 
   def help
