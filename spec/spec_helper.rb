@@ -11,6 +11,10 @@ RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
 end
 
+RSpec.configure do |config|
+  config.infer_spec_type_from_file_location!
+end
+
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
@@ -48,6 +52,7 @@ end
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 RSpec.configure do |config|
   config.include Capybara::DSL
+
 end
 
 require 'rubygems'
